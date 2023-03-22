@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Email Verify
+        </title>
+    </head>
+    <body>
+        <h1>Email Verify</h1>
+        <br>
+        <form action="{{ url_for('verify')}}" method="post">
+            <p>Email to Verify:</p>
+            <br>
+            <input type="text" name="email_message">
+            <br>
+            <button type="submit">Verify</button>
+        </form>
+        <ul>
+            {% for email_message in email_messages %}
+                <p> {{ email_message}}</p>
+            {% endfor %}
+
+        </ul>
+
+    </body>
+
+</html>
